@@ -24,4 +24,4 @@ Z jakiegos powodu np. film The Matrix jest 2x raz ma id = 0 a drugi ma id = 169.
 	MATCH (p:Person) -[:DIRECTED]->(m:Movie) <- [:WROTE]- (p) return p, m
 
 8.	Listę filmów, w których grał zarówno Hugo Weaving jak i Keanu Reeves 
-	match (p:Person{name: "Hugo Weaving"}) -[:ACTED_IN]-> (m: Movie) <- [:ACTED_IN] - (k:Person{name: "Keanu Reeves"}) return m
+	MATCH (p:Person{name: "Hugo Weaving"}) -[:ACTED_IN]-> (m: Movie) <- [:ACTED_IN] - (k:Person{name: "Keanu Reeves"}) return m
